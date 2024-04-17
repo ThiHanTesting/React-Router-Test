@@ -1,4 +1,6 @@
+import { Link } from 'react-router-dom';
 import useFetch from '../hook/useFetch';
+
 import './Home.css'
 
 
@@ -14,8 +16,8 @@ function Home() {
     {blogs && blogs.map(blog => (
       <div key={blog.id} className='card' >
         <h3>{blog.title}</h3>
-        <p>posted by - {blog.author}</p>zz
-        <a href="">Read More</a>
+        <p>posted by - {blog.author}</p>
+      <Link to={`/blogs/${blog.id}`}>Read more</Link>
       </div>
     )) }
    </div>
