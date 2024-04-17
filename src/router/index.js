@@ -3,6 +3,7 @@ import About from '../pages/About'
 import App from '../App'
 import Contact from '../pages/Contact.js'
 import BlogDetail from '../pages/BlogDetail.js'
+import NotFound from '../pages/NotFound.js'
 
 import {
     createBrowserRouter,
@@ -25,6 +26,9 @@ import {
         },{
           path : '/blogs/:id',
           element : <BlogDetail />
+        },{
+          path : '*',
+          element : <NotFound/>
         }
       ]
     },
