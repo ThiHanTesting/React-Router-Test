@@ -1,7 +1,8 @@
 import Home from '../pages/Home'
 import About from '../pages/About'
-import App from '../App.js'
+import App from '../App'
 import Contact from '../pages/Contact.js'
+import BlogDetail from '../pages/BlogDetail.js'
 
 import {
     createBrowserRouter,
@@ -21,6 +22,9 @@ import {
         },{
           path : '/contact' , // localhost:3000/contact
           element : <Contact/>
+        },{
+          path : '/blogs/:id',
+          element : <BlogDetail />
         }
       ]
     },
